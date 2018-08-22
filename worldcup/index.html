@@ -1,0 +1,249 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>World Cup Bandwagon Breakdown</title>
+    <link rel="shortcut icon" href="./img/fifa-world-cup-2018-logo-vector.png" type="image/vnd.microsoft.icon" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="header-container">
+        <header class="wrapper clearfix">
+            <h1 class="title"><img src="./img/fifa-world-cup-2018-logo-vector.png" width="60" height="60" class="d-inline-block align-top" alt="">World Cup Bandwagon Breakdown!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#teams">The Teams</a></li>
+                    <li><a href="#analysis">The Analysis</a></li>
+                    <li><a href="#results">The Results</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="main-container">
+        <div class="main wrapper clearfix">
+
+            <article>
+                <header>
+                    <h1>Overview</h1>
+                    <p>The U.S. soccer team failed to qualify for the 2018 World Cup in Russia. So what are American soccer fans to do? Wither away in an apathetic state of despair and hopelessness? Not a chance. This is the perfect opportunity to bandwagon and throw one’s weight behind a global powerhouse or surprise underdog! So who will the U.S. rally behind as the world’s eyes turn towards the tournaments semi-final matches? Using locational data from <a href="https://developer.twitter.com/en/docs/tweets/search/overview.html" target="_blank">Twitter’s Search API</a> and a <a href="https://www.nltk.org/">natural language algorithm</a>, I was able to perform an in depth sentiment analysis on over 20,000 user tweets from the week of the semi-final matches (July 7 - 14). The results, visualized by state <a href="#results">here</a>, might not be what you expect.</p>
+                    <style>
+                        .embed-container {
+                            position: relative;
+                            padding-bottom: 80%;
+                            height: 0;
+                            max-width: 100%;
+                        }
+
+                        .embed-container iframe,
+                        .embed-container object,
+                        .embed-container iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        small {
+                            position: absolute;
+                            z-index: 40;
+                            bottom: 0;
+                            margin-bottom: -15px;
+                        }
+                    </style>
+                    <div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Twitter World Cup Sentiment Analysis" src="//tpl.maps.arcgis.com/apps/Embed/index.html?webmap=9f189c6beffc47f28d6c35de5de9c33f&extent=-135.4094,21.3437,-66.0637,49.62&level=2&zoom=true&previewImage=false&scale=true&legend=true&amp;show_panel=false&amp&disable_scroll=true&theme=light"></iframe></div>
+                </header>
+                <header id="teams">
+                    <h1>The Teams</h1>
+                </header>
+                <section>
+                    <h2><img src="./img/croatia.svg" width="60" height="60" class="d-inline-block align-top" alt=""> Croatia</h2>
+                    <p>Hot off a nail-biter shootout win over Russia, this small Balkan underdog has captivated the American psyche with their exhilarating play. The gritty Croats were clear fan favorites in California and Texas, capturing 40% and 37% of the positive tweets in those respective states. </p>
+                </section>
+                <section>
+                    <h2><img src="./img/england.svg" width="60" height="60" class="d-inline-block align-top" alt=""> England</h2>
+                    <p>"It's coming home." The Three Lions have been on a mission this World Cup! This young, hungry squad have proven the cynics wrong game after game and seem poised to deliver the champions trophy back to the birthplace of the sport. The English won the hearts of the eastern seaboard, capturing prevailing sentiments in New York (39%) and Florida (35%).</p>
+                </section>
+                <section>
+                    <h2><img src="./img/france.svg" width="60" height="60" class="d-inline-block align-top" alt=""> France</h2>
+                    <p>If there is one squad truly paying homage to the "beautiful game" with their play, it is France. They've dominated highlight reels with one <a href="https://www.youtube.com/watch?v=0q7jS1G0Omo"> stunning goal after another</a>. There wasn't a lot of Twitter action around Les Bleus, but they did manage to capture a favorable tweet in South Dakota! </p>
+                </section>
+                <section>
+                    <h2><img src="./img/belgium.svg" width="60" height="60" class="d-inline-block align-top" alt=""> Belgium</h2>
+                    <p>The powerhouse Belgians have more Premiere League players (12 of the 23 man squad) than any other team in the World Cup. They are a heavy favorite amongst those in the know. Their Goliath status may have dampened enthusiasm stateside as the Red Devils only garnered love in a handful of states in the southwest (Utah and New Mexico).</p>
+                </section>
+
+                <hr>
+            </article>
+
+      
+            <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+         
+
+            <aside>
+                <h3>And then there were 4</h3>
+                <img src="./img/World-Cup-2018-bracket.jpg" width="100%" height="50%" class="d-inline-block align-top" alt="">
+                <br>
+            </aside>
+
+            <gap></gap>
+            <aside>
+                <h3>Croatia carries California!</h3>
+                <blockquote class="twitter-tweet">
+                    <p>"GGOOOOOOOOOOO<br>AAAAAAAAAAAAAAALLLLLL<br>LLLLLLLLLLL Croatia <a href="https://twitter.com/hashtag/WorldCup2018?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup2018</a> <a href="https://twitter.com/hashtag/Croatia?src=hash&amp;ref_src=twsrc%5Etfw">#Croatia</a> <a href="https://twitter.com/hashtag/SemiFinals?src=hash&amp;ref_src=twsrc%5Etfw">#SemiFinals</a></p>— Dustin B (@followdustinb) <a href="https://twitter.com/i/web/status/1015700260486766592">July 7, 2018 Canyon Lake, CA</a> </blockquote>
+            </aside>
+
+            <gap></gap>
+            <aside>
+                <h3>"It's coming home"</h3>
+                <blockquote class="twitter-tweet">
+                    <p>"It’s Coming Home” has replaced “Hello” in my vocabulary. It’s like “Under His Eye” from Hand Maids Tale. <a href="https://twitter.com/hashtag/WorldCup2018?src=hash&amp;ref_src=twsrc%5Etfw">#WorldCup2018</a> <a href="https://twitter.com/hashtag/ENG?src=hash&amp;ref_src=twsrc%5Etfw">#ENG</a> <a href="https://twitter.com/hashtag/ItsComingHome?src=hash&amp;ref_src=twsrc%5Etfw">#ItsComingHome</a></p>— Russell Brand (@rustyrockets) <a href="https://twitter.com/rustyrockets/status/1016276277291110407?ref_src=twsrc%5Etfw">July 9, 2018</a></blockquote>
+            </aside>
+
+            <article>
+                <header id="analysis">
+                    <h1>The Analysis</h1>
+                    <big><img src="./img/Twitter-Logo.svg" width="60" height="60" class="d-inline-block align-top" alt="">Twitter Search API + <img src="./img/pythonnltk.svg" width="80" height="80" class="d-inline-block align-top" alt=""> Natural Language Machine Learning = Prevailing bandwagon sentiments by state</big>
+                </header>
+                <section>
+                    <h2>Twitter Data</h2>
+                    <p>The Twitter Search API was used to search a random sample of the past week of tweets that reference the World Cup and one of the four semi-final teams. The <a href="http://www.tweepy.org/" target="_blank">Tweepy</a> library was exceptional at handling finicky rate limits and pulling down a slug of tweets. The harvest was plentiful! ~20,000 tweets with locations information and explicit mention of teams. Check out the heavy lifting <a href="twitter.html" target="_blank">here</a></p>
+                </section>
+                <section>
+                    <h2>Sentiment Analysis</h2>
+                    <p>By applying a <a href="http://www.dealingdata.net/2016/07/24/PoGo-Series-NaiveBayesClassifier/" target="_blank">Naive Bayes Classifier</a> technique to the World Cup semi-final tweets, each was classified as having a positive or negative tone. The process of <a href="classifyandtrain.html" target="_blank">manually classifying a training set</a> was a doozy. But no one said building intuition in machines would be easy! <a href="sentimenttraininging.html" target="_blank">The classifier</a> was then used to remove negative tweets from the dataset before using the positive mentions to map out the fan-favorite teams in each state.</p>
+                </section>
+                <section>
+                    <h2>Statistical Analysis</h2>
+                    <p>With <a href="statanalysis.html" target="_blank">negative tweets successfully removed</a>, the bandwagon tweets were tallied for each state and the fraction of tweets referencing each team was used as the measure of dominance. Statistical and systematic error were also accounted for and applied to the mappings.</p>
+                </section>
+
+            </article>
+
+            <aside>
+                <h3>Rain down tweets!</h3>
+                <p><a href="twitter.html" target="_blank"><img src="./img/codesnippet.PNG" width="100%" class="d-inline-block align-top" alt=""></a></p>
+            </aside>
+
+            <fullwidth>
+                <hr>
+                <header id="results">
+                    <h1>The Results</h1>
+                </header>
+                <section>
+                    <h2>Predominance by State</h2>
+                    <p>With sentiments analyzed, bandwagon tweets classified and counted for each team by state it's time to visualize the data! Using three visual variables - color, proportional symbols and gradient - the map below conveys predominance by team, variablity in total number of tweets classified for each state and strength of dominance. As you can see, some states had little or no tweets while others were prolific. The magnitude of dominance also varied. The average relative error for each teams dominance metric is also available for display alongside tweet count and team fraction in the informational click popup. </p>
+                    <style>
+                        .embed-container {
+                            position: relative;
+                            padding-bottom: 80%;
+                            height: 0;
+                            max-width: 100%;
+                        }
+
+                        .embed-container iframe,
+                        .embed-container object,
+                        .embed-container iframe {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        small {
+                            position: absolute;
+                            z-index: 40;
+                            bottom: 0;
+                            margin-bottom: -15px;
+                        }
+                    </style>
+                    <div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Twitter World Cup Sentiment Analysis" src="//tpl.maps.arcgis.com/apps/Embed/index.html?webmap=9f189c6beffc47f28d6c35de5de9c33f&extent=-135.4094,21.3437,-66.0637,49.62&zoom=true&previewImage=false&scale=true&active_panel=legend&amp;legend=true&amp;show_panel=true&amp&disable_scroll=true&theme=light"></iframe></div>
+                </section>
+                <section>
+                    <h2>Conclusions</h2>
+                    <p>We all love an underdog and this years World Cup demonstrated as much. When left with no national team to pull for, American's got behind the little guy. According to this analysis Croatia enjoyed popular support in more states across the country than any of the other three teams in the semi-finals. However, there was some pretty stark regional variation. The eastern seaboard rallied hard for the young English squad to advance while the southwest - notably sparse World Cup tweeters - gave Belgium the nod. All this to say, a nation without a horse in the race will still find something to bet on.</p>
+                </section>
+
+            </fullwidth>
+
+
+        </div>
+        <!-- #main -->
+    </div>
+    <!-- #main-container -->
+
+    <div class="footer-container">
+        <footer class="wrapper">
+            <h3>Ⓒ 2018 Smyth Geospatial</h3>
+        </footer>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+    </script>
+
+    <script src="js/main.js"></script>
+    
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
